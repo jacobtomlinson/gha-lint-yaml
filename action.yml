@@ -1,4 +1,4 @@
-name: "YAML Lint"
+name: "YAML file linter"
 description: "Lint a YAML file in your project"
 author: "Jacob Tomlinson"
 inputs:

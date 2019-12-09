@@ -1,13 +1,17 @@
-name: "Python Container Action Template"
-description: "Get started with Python Container actions"
+name: "YAML Lint"
+description: "Lint a YAML file in your project"
 author: "Jacob Tomlinson"
 inputs:
-  myInput:
-    description: "Input to use"
-    default: "world"
+  path:
+    description: "Path to the YAML file to be linted"
+    required: true
+  strict:
+    description: "Run the linter in strict mode (error on warnings)"
+    required: false
+    default: false
 outputs:
-  myOutput:
-    description: "Output from the action"
+  warnings:
+    description: "Number of warnings raised if lint was successful"
 runs:
   using: "docker"
   image: "Dockerfile"

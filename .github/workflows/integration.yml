@@ -7,10 +7,9 @@ jobs:
       - uses: actions/checkout@master
       - name: Self test
         id: selftest
-
-        # Put your action repo here
-        uses: jacobtomlinson/python-container-action@master
-
-      - name: Check outputs
+        uses: jacobtomlinson/gha-lint-yaml@master
+        with:
+          path: "tests/valid.yaml"
+      - name: Check outputs and modified files
         run: |
-          test "${{ steps.selftest.outputs.myOutput }}" == "Hello world"
+          test "${{ steps.selftest.outputs.warnings }}" == "1"

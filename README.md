@@ -77,6 +77,6 @@ jobs:
         path: path/to/my/yaml/file.yaml
 
     - name: Check outputs
-        run: |
-          echo "There were ${{ steps.yamllint.outputs.warnings }} YAML linting warnings."
+      run: |
+        echo "There were ${{ steps.yamllint.outputs.warnings }} YAML linting warnings."
 ```
